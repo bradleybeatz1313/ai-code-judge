@@ -1,0 +1,13 @@
+{
+  "slug": "two-sum",
+  "title": "Two Sum",
+  "language": "python",
+  "entrypoint": "two_sum",
+  "description": "Given a list of integers and a target, return the indices of the two numbers that add up to the target. Exactly one solution exists; you may not use the same element twice.",
+  "reference_complexity": "O(n)",
+  "security_sensitive": false,
+  "candidates": [
+    {"label": "model-a-bruteforce", "file": "model_a.py", "measured_complexity": "O(n^2)"},
+    {"label": "model-b-hashmap", "file": "model_b.py", "measured_complexity": "O(n)"}
+  ]
+}

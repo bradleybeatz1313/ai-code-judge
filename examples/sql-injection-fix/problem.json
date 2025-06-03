@@ -1,0 +1,13 @@
+{
+  "slug": "sql-injection-fix",
+  "title": "User Lookup Query Builder",
+  "language": "python",
+  "entrypoint": "build_query",
+  "description": "Implement build_query(username) that returns a (sql, params) tuple to look up a user by username. The query must be safe against SQL injection. The harness checks both functional correctness and the safety of the construction.",
+  "reference_complexity": "O(1)",
+  "security_sensitive": true,
+  "candidates": [
+    {"label": "model-a-fstring", "file": "model_a.py", "measured_complexity": "O(1)"},
+    {"label": "model-b-parameterized", "file": "model_b.py", "measured_complexity": "O(1)"}
+  ]
+}

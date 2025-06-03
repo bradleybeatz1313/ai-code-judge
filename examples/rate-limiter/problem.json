@@ -1,0 +1,13 @@
+{
+  "slug": "rate-limiter",
+  "title": "Sliding-Window Rate Limiter",
+  "language": "python",
+  "entrypoint": "simulate",
+  "description": "Implement a rate limiter allowing at most `limit` requests per `window` seconds per key. `simulate(events, limit, window)` takes a list of (key, timestamp) events in order and returns a list of booleans: True if the request is allowed, False if rejected.",
+  "reference_complexity": "O(n)",
+  "security_sensitive": false,
+  "candidates": [
+    {"label": "model-a-fixed-window", "file": "model_a.py", "measured_complexity": "O(n)"},
+    {"label": "model-b-sliding-log", "file": "model_b.py", "measured_complexity": "O(n)"}
+  ]
+}

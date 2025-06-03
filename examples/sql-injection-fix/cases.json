@@ -1,0 +1,6 @@
+[
+  {"name": "basic-simple", "input": ["alice"], "expected": ["SELECT id, email FROM users WHERE username = ?", ["alice"]]},
+  {"name": "basic-numeric", "input": ["user123"], "expected": ["SELECT id, email FROM users WHERE username = ?", ["user123"]]},
+  {"name": "edge-injection-attempt", "input": ["x'; DROP TABLE users;--"], "expected": ["SELECT id, email FROM users WHERE username = ?", ["x'; DROP TABLE users;--"]]},
+  {"name": "edge-quote", "input": ["O'Brien"], "expected": ["SELECT id, email FROM users WHERE username = ?", ["O'Brien"]]}
+]

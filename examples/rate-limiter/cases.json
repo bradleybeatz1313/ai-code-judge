@@ -1,0 +1,7 @@
+[
+  {"name": "basic-under-limit", "input": [[["u1", 0], ["u1", 1], ["u1", 2]], 5, 10], "expected": [true, true, true]},
+  {"name": "basic-over-limit", "input": [[["u1", 0], ["u1", 1], ["u1", 2], ["u1", 3]], 3, 10], "expected": [true, true, true, false]},
+  {"name": "basic-two-keys", "input": [[["u1", 0], ["u2", 0], ["u1", 1], ["u2", 1]], 1, 10], "expected": [true, true, false, false]},
+  {"name": "edge-window-expiry", "input": [[["u1", 0], ["u1", 1], ["u1", 11], ["u1", 12]], 2, 10], "expected": [true, true, true, true]},
+  {"name": "edge-boundary-burst", "input": [[["u1", 8], ["u1", 9], ["u1", 10], ["u1", 11]], 2, 10], "expected": [true, true, false, false]}
+]
