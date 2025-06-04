@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-code-judge"
+version = "0.3.0"
+description = "Structured toolkit for evaluating and ranking AI-generated code."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Bradley Barroso"}]
+keywords = ["ai", "code-evaluation", "llm", "rubric", "code-review"]
+
+[project.scripts]
+ai-code-judge = "judge.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.setuptools]
+packages = ["judge", "judge.rubrics", "judge.runners"]
